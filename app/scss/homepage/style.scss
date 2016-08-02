@@ -1,0 +1,473 @@
+@import 'mixins';
+@import 'variables';
+
+@font-face {
+  font-family: 'Futura-Heavy';
+  src: 
+  url('../../fonts/Futura-Heavy.eot?#iefix') format('embedded-opentype'),  
+  url('../../fonts/Futura-Heavy.woff') format('woff'), 
+  url('../../fonts/Futura-Heavy.ttf')  format('truetype'), 
+  url('../../fonts/Futura-Heavy.svg#Futura-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: 
+  url('../../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/HelveticaNeue.woff') format('woff'),
+  url('../../fonts/HelveticaNeue.ttf')  format('truetype'),
+  url('../../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPTDemi';
+  src: 
+  url('../../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),  
+  url('../../fonts/FuturaPT-Demi.otf')  format('opentype'),
+  url('../../fonts/FuturaPT-Demi.woff') format('woff'), 
+  url('../../fonts/FuturaPT-Demi.ttf')  format('truetype'), 
+  url('../../fonts/FuturaPT-Demi.svg#FuturaPT-Demi') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Times Italic';
+  src: 
+  url('../../fonts/Times-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Times-Italic.woff') format('woff'), 
+  url('../../fonts/Times-Italic.ttf')  format('truetype'), 
+  url('../../fonts/Times-Italic.svg#Times-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: 
+  url('../../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),  
+  url('../../fonts/HelveticaNeue-Bold.woff') format('woff'), 
+  url('../../fonts/HelveticaNeue-Bold.ttf')  format('truetype'), 
+  url('../../fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrapper{
+	width: 1300px;
+	margin: 0 auto;
+}
+.content_wrap{
+	display: block;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+//HEADER
+.header_top{
+	position: relative;
+	padding-top: 7px;
+	width: 100%;
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	h1{
+		margin: 0;
+		font-family: 'Futura-Heavy';
+		font-size: 30px;
+		line-height: 65px;
+	}
+	.logo{
+		float: left;
+		padding-top: 3px;
+		letter-spacing: 0.06em;
+	}
+	.sign_up, .bag{
+		float: right;
+		font-family: 'HelveticaNeue';
+		font-size: 12px;
+		line-height: 65px;
+	}
+	.sign_up{
+		margin-right: 54px;
+		letter-spacing: 0.02em;
+	}
+	.bag{
+		img{
+			margin-right: 16px;
+		}
+	}
+	@include clearfix;
+}
+
+header{
+	display: block;
+	height: 120px;
+	nav{
+		position: relative;
+		margin-top: 4px;
+		a{
+			text-decoration: none;
+			color: black;
+			&:hover{
+				color: #f14a58;
+			}
+		}
+		@include clearfix;
+	}
+	ul{
+		padding: 0;
+		margin: 3px 0 0 0;
+		float: left;
+		width: 917px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	li{
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		font-size: 14px;
+		font-family: 'FuturaPTDemi';
+		letter-spacing: 0.03em;
+	}
+	form{
+		float: right;
+		width: 118px;
+		height: 25px;
+		border-bottom: 2px solid #e5e5e5;
+		input[type="image"]{
+			vertical-align: middle;
+		}
+		input:focus{
+			outline: none;
+		}
+		.search-input{
+			width: 100px;
+			background: transparent;
+			border: none;
+			font-family: 'FuturaPTDemi';
+			font-size: 12px;
+			letter-spacing: 0.025em;
+		} 
+	}
+}
+
+//BANNER
+
+//SLIDER
+.baner_slider{
+	height:850px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	.slider_inner{
+		transition: 1s;
+		.slide{
+			float: left;
+			display: block;
+			width: 1300px;
+			height: 850px;
+		}
+	}
+	.slider_nav{
+		position:absolute;
+		width: 100%;
+		line-height: 80px;
+		border-top: 1px solid #d1d1d2;
+		text-align: center;
+		bottom: 0;
+		z-index: 1;
+		cursor: default;
+		.dot{
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #c8c8c8;
+			cursor: pointer;
+			border-radius: 16px;
+			margin: 0 11px 2px;
+		}
+		.active{
+			background: #f14a58;
+		}
+	}
+}
+
+//BANNERS
+
+.banners{
+	position: relative;
+	box-sizing: border-box;
+	.left_banner, .right_banner{
+		position: relative;
+		display: inline-block;
+		box-sizing: border-box;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		width: 50%;
+		height: 386px;
+	}
+	.left_banner{
+		float: left;
+		border-right: 1px solid #e5e5e5;
+		.banner_text{
+			position: absolute;
+			top: 59px;
+			left: 426px;
+		}
+	}
+	.right_banner{
+		float: right;
+		.banner_text{
+			position: absolute;
+			top: 59px;
+			left: 377px;
+		}
+	}
+	.banner_text{
+		text-align: center;
+		h4{
+			padding: 0;
+			margin: 0;
+			font-size: 30px;
+			font-family: 'FuturaPTDemi';
+			letter-spacing: 0.025em;
+			color:black;
+		}
+		span{
+			line-height: 36px;
+			font-size: 16px;
+			font-family: 'Times Italic';
+			color: #757575;
+		}
+	}
+	@include clearfix;
+}
+
+//NEW ARRIVALS
+
+.arrivals{
+	padding: 75px 0 78px;
+	h2{
+		font-size: 60px;
+		text-align: center;
+		font-family: 'FuturaPTDemi';
+		letter-spacing: 0.02em;
+	}
+	.arrivals_wrap{
+		margin: 86px 0 84px;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		div{
+			display: inline-block;
+			width: 240px;
+		}
+		.item_info{
+			padding-top: 39px;
+			text-align: center;
+			width: 220px;
+			display: block;
+			margin: 0 auto;
+			.item_name{
+				font-size: 14px;
+				line-height: 24px;
+				font-family: 'HelveticaNeue';
+				letter-spacing: 0.07em;
+				font-weight: bold;
+			}
+			.item_price{
+				line-height: 42px;
+				font-size: 14px;
+				font-family: 'HelveticaNeue';
+			}
+		}
+	}
+	.all_arrivals{
+		display: block;
+		width: 338px;
+		line-height: 73px;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+		margin: 0 auto;
+		font-size: 26px;
+		font-family: 'FuturaPTDemi';
+		letter-spacing: 0.03em;
+	}
+}
+
+//FOOTER
+
+footer{
+	border-top: 1px solid #e5e5e5;
+}
+
+//FOOTER LINKS
+.footer_links{
+	position: relative;
+	.left, .right{
+		width: 50%;
+		height: 448px;
+		padding-top: 23px;
+		box-sizing: border-box;
+		float: left;
+		@include clearfix;
+	}
+	.right{
+		padding-left: 5%;
+		border-left: 1px solid #e5e5e5;
+	}
+	section{
+		display: inline-block;
+		float: left;
+		box-sizing: border-box;
+		letter-spacing: 0.03em;
+		h5{
+			font-size: 18px;
+			font-family: 'FuturaPTDemi';
+			margin-bottom: 35px;
+		}
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+		font-size: 14px;
+		font-family: 'HelveticaNeue';
+		line-height: 40px;
+	}
+	.quick_links{
+		float: left;
+		width: 45%;
+	}
+	.customer_care{
+		float: left;
+		width: 55%;
+	}
+	.questions{
+		float: left;
+		width: 50%;
+		a{
+			font-size: 14px;
+			font-family: 'HelveticaNeue';
+			span{
+				font-weight: bold;
+			}
+			img{
+				margin-right: 11px;
+			}
+		}
+	}
+	.phone{
+		float: left;
+		width: 45%;
+		p{
+			font-family: 'HelveticaNeue';
+			font-size: 14px;
+		}
+	}
+	.questions,.phone{
+		h5{
+			margin-bottom: 18px;
+		}
+	}
+	.delivery{
+		margin-top: 57px;
+    	width: 57%;
+		font-family: 'Times Italic';
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 0;
+	}
+	.socials{
+		margin-top: 37px;
+		width: 90%;
+		a{
+			margin-right: 20px;
+		}
+	}
+	@include clearfix;
+}
+
+//FOOTER BOTTOM
+
+.footer_bottom{
+	border-top: 1px solid #e5e5e5;
+	line-height: 80px;
+	position: relative;
+	
+	section{
+		display: inline-block;
+		font-family: 'HelveticaNeue';
+		font-weight: bold;
+		font-size: 12px;
+
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		li{
+			list-style: none;
+			display: inline-block;
+		}
+	}
+	.copyright{
+		float: left;
+		letter-spacing: 0.05em;
+	}
+	.legal_privaty{
+		float: right;
+		width: 294px;
+		letter-spacing: 0.07em;
+	}
+	.share{
+		font-family: 'FuturaPTDemi';
+		font-size: 18px;
+		position: absolute;
+		width: 106px;
+		left:50%;
+		margin-left: -53px;
+		line-height: 75px;
+		span{
+			margin-right: 5px;
+		}
+		i{		
+			display: inline-block;
+			margin-right: -5px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 3.5px 4px 3.5px 0;
+			border-color: transparent #f4f4f4 transparent transparent;
+		}
+		a{
+			background: #f4f4f4;
+			width: 42px;
+			line-height: 21px;
+			display: inline-block;
+			text-align: center;
+			font-size: 12px;
+			font-weight: normal;
+			font-family: 'HelveticaNeue';
+		}
+	}
+	@include clearfix;
+}
+
