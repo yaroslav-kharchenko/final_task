@@ -29,13 +29,13 @@
   font-style: normal; }
 
 .wrapper {
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto; }
 
 .content_wrap {
   display: block;
   max-width: 1180px;
-  margin: 0 auto; }
+  padding: 0 60px; }
 
 a {
   text-decoration: none;
@@ -67,6 +67,10 @@ a {
     letter-spacing: 0.02em; }
   .header_top .bag img {
     margin-right: 16px; }
+  .header_top .drop_menu_button {
+    display: none; }
+  .header_top .close_menu_button {
+    display: none; }
   .header_top:after {
     content: "";
     display: table;
@@ -76,29 +80,35 @@ header {
   display: block;
   height: 120px; }
   header nav {
-    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 4px; }
     header nav a {
       text-decoration: none;
       color: black; }
       header nav a:hover {
         color: #f14a58; }
-    header nav:after {
-      content: "";
-      display: table;
-      clear: both; }
+  header .header_ul_wrap {
+    max-width: 100%;
+    width: 918px; }
   header ul {
     padding: 0;
-    margin: 3px 0 0 0;
-    float: left;
-    width: 917px;
+    margin: 2px 0 0 0;
+    max-width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -111,16 +121,26 @@ header {
     font-family: 'FuturaPTDemi';
     letter-spacing: 0.03em; }
   header form {
-    float: right;
-    width: 118px;
+    display: inline-block;
+    max-width: 118px;
+    width: 10%;
     height: 25px;
-    border-bottom: 2px solid #e5e5e5; }
+    margin-left: 30px;
+    border-bottom: 2px solid #e5e5e5;
+    position: relative; }
     header form input[type="image"] {
-      vertical-align: middle; }
+      vertical-align: middle;
+      width: 11.01695%;
+      margin: 3px 0 0 0;
+      padding: 0;
+      float: right; }
     header form input:focus {
       outline: none; }
     header form .search-input {
-      width: 100px;
+      margin: 0;
+      padding: 0;
+      max-width: 100px;
+      width: 83.89831%;
       background: transparent;
       border: none;
       font-family: 'FuturaPTDemi';
@@ -128,7 +148,9 @@ header {
       letter-spacing: 0.025em; }
 
 .baner_slider {
-  height: 850px;
+  max-height: 850px;
+  height: auto;
+  max-width: 1300px;
   width: 100%;
   overflow: hidden;
   position: relative; }
@@ -140,6 +162,11 @@ header {
       display: block;
       width: 1300px;
       height: 850px; }
+      .baner_slider .slider_inner .slide a {
+        width: 100%;
+        min-width: 1300px; }
+      .baner_slider .slider_inner .slide img {
+        width: 100%; }
   .baner_slider .slider_nav {
     position: absolute;
     width: 100%;
@@ -165,7 +192,7 @@ header {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  .banners .left_banner, .banners .right_banner {
+  .banners .left_banner, .banners .right_banner, .banners .right_banner_tablet {
     position: relative;
     display: inline-block;
     -webkit-box-sizing: border-box;
@@ -173,20 +200,25 @@ header {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     width: 50%;
-    height: 386px; }
+    max-height: 386px; }
+    .banners .left_banner img, .banners .right_banner img, .banners .right_banner_tablet img {
+      height: auto;
+      width: 100%; }
+  .banners .right_banner_tablet {
+    display: none; }
   .banners .left_banner {
     float: left;
     border-right: 1px solid #e5e5e5; }
     .banners .left_banner .banner_text {
       position: absolute;
       top: 59px;
-      left: 426px; }
+      left: 65.53846%; }
   .banners .right_banner {
     float: right; }
     .banners .right_banner .banner_text {
       position: absolute;
       top: 59px;
-      left: 377px; }
+      left: 58%; }
   .banners .banner_text {
     text-align: center; }
     .banners .banner_text h4 {
@@ -207,7 +239,8 @@ header {
     clear: both; }
 
 .arrivals {
-  padding: 75px 0 78px; }
+  padding-top: 75px;
+  padding-bottom: 78px; }
   .arrivals h2 {
     font-size: 60px;
     text-align: center;
@@ -229,11 +262,14 @@ header {
             justify-content: space-between; }
     .arrivals .arrivals_wrap div {
       display: inline-block;
-      width: 240px; }
+      width: 20.33898%; }
+      .arrivals .arrivals_wrap div img {
+        height: auto;
+        width: 100%; }
     .arrivals .arrivals_wrap .item_info {
       padding-top: 39px;
       text-align: center;
-      width: 220px;
+      width: 91.66667%;
       display: block;
       margin: 0 auto; }
       .arrivals .arrivals_wrap .item_info .item_name {
@@ -248,8 +284,9 @@ header {
         font-family: 'HelveticaNeue'; }
   .arrivals .all_arrivals {
     display: block;
-    width: 338px;
-    line-height: 73px;
+    width: 28.64407%;
+    height: 73px;
+    line-height: 68px;
     text-align: center;
     border: 1px solid #e5e5e5;
     margin: 0 auto;
@@ -298,18 +335,22 @@ footer {
     float: left;
     width: 45%; }
   .footer_links .customer_care {
-    float: left;
-    width: 55%; }
+    float: right;
+    width: 55%;
+    letter-spacing: 0.02em; }
+    .footer_links .customer_care h5 {
+      letter-spacing: 0.03em; }
   .footer_links .questions {
     float: left;
     width: 50%; }
     .footer_links .questions a {
       font-size: 14px;
-      font-family: 'HelveticaNeue'; }
+      font-family: 'HelveticaNeue';
+      letter-spacing: 0.038em; }
       .footer_links .questions a span {
         font-weight: bold; }
       .footer_links .questions a img {
-        margin-right: 11px; }
+        margin-right: 9px; }
   .footer_links .phone {
     float: left;
     width: 45%; }
@@ -363,10 +404,11 @@ footer {
       display: inline-block; }
   .footer_bottom .copyright {
     float: left;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.045em; }
   .footer_bottom .legal_privaty {
     float: right;
-    width: 294px;
+    width: 36%;
+    max-width: 294px;
     letter-spacing: 0.07em; }
   .footer_bottom .share {
     font-family: 'FuturaPTDemi';
@@ -377,7 +419,8 @@ footer {
     margin-left: -53px;
     line-height: 75px; }
     .footer_bottom .share span {
-      margin-right: 5px; }
+      margin-right: 2px;
+      letter-spacing: 0.03em; }
     .footer_bottom .share i {
       display: inline-block;
       margin-right: -5px;
@@ -399,3 +442,182 @@ footer {
     content: "";
     display: table;
     clear: both; }
+
+@media (max-width: 1024px) {
+  .content_wrap {
+    padding: 0 39px; }
+  header form {
+    width: 13px;
+    border-bottom: none; }
+    header form .search-input {
+      display: none; }
+    header form input[type="image"] {
+      vertical-align: middle;
+      width: 13px;
+      padding: 0; }
+  .baner_slider {
+    max-height: 820px; }
+  .banners {
+    max-height: 253px; }
+    .banners .right_banner {
+      display: none; }
+    .banners .right_banner_tablet {
+      display: inline-block;
+      width: 33.33333%; }
+      .banners .right_banner_tablet .banner_text {
+        width: 50px;
+        position: absolute;
+        top: 167px;
+        left: 50%;
+        margin-left: -25px; }
+        .banners .right_banner_tablet .banner_text h4 {
+          color: #f14a58; }
+    .banners .left_banner {
+      width: 66.66667%; }
+      .banners .left_banner img {
+        width: auto;
+        max-height: 276px;
+        margin-top: -16px; }
+      .banners .left_banner .banner_text {
+        position: absolute;
+        top: 30px;
+        left: 64.5%; }
+    .banners .right_banner_tablet, .banners .left_banner {
+      height: 253px;
+      max-height: 253px;
+      overflow: hidden;
+      text-align: center; }
+      .banners .right_banner_tablet h4, .banners .left_banner h4 {
+        font-size: 26px; }
+  .arrivals {
+    padding-top: 42px;
+    padding-bottom: 138px; }
+    .arrivals h2 {
+      font-size: 50px; }
+    .arrivals .arrivals_wrap {
+      margin: 73px 0 73px; }
+      .arrivals .arrivals_wrap div {
+        width: 29.56522%; }
+        .arrivals .arrivals_wrap div:nth-child(4) {
+          display: none; }
+      .arrivals .arrivals_wrap .item_info {
+        padding-top: 34px;
+        letter-spacing: 0em; }
+    .arrivals .all_arrivals {
+      display: block;
+      width: 43.18841%;
+      line-height: 68px;
+      height: 68px;
+      text-align: center;
+      border: 1px solid #e5e5e5;
+      margin: 0 auto;
+      font-size: 24px;
+      font-family: 'FuturaPTDemi';
+      letter-spacing: 0.03em; }
+  .footer_links section h5 {
+    font-size: 16px;
+    margin-bottom: 31px; }
+  .footer_links .delivery {
+    display: none; }
+  .footer_links .left, .footer_links .right {
+    height: 423px; }
+  .footer_links .quick_links {
+    min-width: 88px; }
+  .footer_links .customer_care {
+    float: right;
+    min-width: 130px; }
+  .footer_links .right {
+    float: right;
+    padding-left: 0;
+    border-left: none; }
+    .footer_links .right section {
+      float: none;
+      width: 100%; }
+    .footer_links .right .questions {
+      margin-bottom: 12px; }
+    .footer_links .right .phone {
+      margin-bottom: 38px; } }
+
+@media (max-width: 760px) {
+  .content_wrap {
+    padding: 0 20px; }
+  .header_top {
+    height: 70px;
+    line-height: 65px;
+    padding-top: 0; }
+    .header_top .logo {
+      padding-top: 1px;
+      text-transform: uppercase;
+      font-size: 24px; }
+      .header_top .logo span {
+        display: none; }
+    .header_top .sign_up {
+      display: none; }
+    .header_top .bag {
+      margin: 2px 0 0 59px;
+      float: left; }
+      .header_top .bag img {
+        display: none; }
+    .header_top .drop_menu_button, .header_top .close_menu_button {
+      display: inline-block;
+      float: right;
+      line-height: 70px;
+      border-left: 1px solid #e5e5e5; }
+      .header_top .drop_menu_button img, .header_top .close_menu_button img {
+        margin-left: 20px; }
+    .header_top .close_menu_button {
+      line-height: 70px;
+      display: none;
+      border-left: none; }
+  header {
+    height: 70px;
+    position: relative; }
+    header nav {
+      display: none; }
+    header .drop_menu {
+      opacity: 0;
+      display: block;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      position: absolute;
+      top: 66px;
+      left: 0px;
+      border-top: 1px solid #e5e5e5;
+      z-index: 9999;
+      background-color: white;
+      padding: 12px 0 25px 19px; }
+      header .drop_menu ul {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0; }
+        header .drop_menu ul li {
+          display: block;
+          font-size: 28px;
+          line-height: 60px; }
+      header .drop_menu form {
+        float: none;
+        max-width: 167px;
+        width: 100%;
+        height: 25px;
+        border-bottom: 2px solid #e5e5e5;
+        margin-top: 52px;
+        margin-left: 0;
+        position: relative; }
+        header .drop_menu form input[type="image"] {
+          vertical-align: middle;
+          float: right;
+          width: 13px; }
+        header .drop_menu form input:focus {
+          outline: none; }
+        header .drop_menu form .search-input {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          max-width: 100px;
+          background: transparent;
+          border: none;
+          font-family: 'FuturaPTDemi';
+          font-size: 12px;
+          letter-spacing: 0.025em; } }

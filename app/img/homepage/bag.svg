@@ -1,0 +1,36 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   viewBox="0 0 12 12.5"
+   height="12.5"
+   width="12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00000b;
+        stroke-width: 1px;
+      }
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <ellipse
+     style="fill:none;fill-rule:evenodd;stroke:#00000b;stroke-width:1px"
+     ry="4"
+     rx="3"
+     cy="4.2542372"
+     cx="6.0211868"
+     class="cls-1"
+     id="hand" />
+  <path
+     style="fill-rule:evenodd"
+     id="form"
+     class="cls-2"
+     d="m 1.0148305,3.5338982 9.9999995,0 1,9.0000008 -11.99999948,0 z" />
+</svg>

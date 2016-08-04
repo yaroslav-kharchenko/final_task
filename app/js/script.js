@@ -1,11 +1,27 @@
 console.log('My script');
 
+function dropMenu(){
+	$('header nav').addClass('drop_menu');
+	$('.header_top .drop_menu_button').css("display","none");
+	$('.header_top .close_menu_button').css("display","block");
+	$('.drop_menu').fadeTo('slow', 1);
+	$('.drop_menu').css({
+		opacity: '1',
+	});
+}
+
+function closeMenu(){
+	$('.drop_menu').fadeTo('slow', 0);
+	$('.drop_menu').removeClass('drop_menu');
+	$('.header_top .close_menu_button').css("display","none");
+	$('.header_top .drop_menu_button').css("display","block");
+}
+
 $(document).ready(function(){
 
 	var slidesBox = $('.slider_inner');
 	var slides = slidesBox.children('.slide');
 	var slidesNav = $('.slider_nav');
-	console.log(slides);
 	var slidesWidth = slidesBox.width();
 	var slidesLength = slides.length;
 	var sliderIndex = slidesLength;
@@ -15,13 +31,11 @@ $(document).ready(function(){
 
 	function moveSlide(){
 		var tempIndex = $('.slider_nav .active').index();
-		console.log(tempIndex);
 		tempIndex += 1;
 		if(tempIndex < slidesLength){
 			$('.slider_nav .active').removeClass('active');
 			$('.slider_nav .dot').eq(tempIndex).addClass('active');
 			sliderOffset = tempIndex * slidesWidth;
-			console.log(sliderOffset);
 			slidesBox.css("transform","translate3d(-"+sliderOffset+"px, 0px, 0px)");
 		} else{
 			$('.slider_nav .active').removeClass('active');
@@ -33,7 +47,7 @@ $(document).ready(function(){
 	function autoplay(){
 		interval = setInterval(function(){
 	    	moveSlide();
-	    }, 3000);
+	    }, 2500);
 	}
 
 	for (var i = 0; i < slides.length-1; i++) {
@@ -64,5 +78,4 @@ $(document).ready(function(){
 	$('.baner_slider').mouseleave(function(){
 		autoplay()
 	});
-
 })
