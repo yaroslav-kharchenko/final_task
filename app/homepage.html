@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Template</title>
 	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/homepage/style.css">
@@ -12,24 +13,27 @@
 	<div class="wrapper">
 		<header class="content_wrap">
 			<section class="header_top">
-				<h1><a href="#" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
-				<a href="#" class="bag"><img src="img/homepage/bag.svg" alt="">Bag</a>
+				<h1><a href="homepage.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag"><img src="img/homepage/bag.svg" alt="">Bag
+					<span class="bag_price"></span>
+					<span class="bag_count"></span>
+				</a>
 				<a href="#" class="sign_up">E-mail sign up</a>
 				<a href="#" class="drop_menu_button" onclick="dropMenu()"><img src="img/homepage/ico_menu.svg" alt=""></a>
 				<a href="#" class="close_menu_button" onclick="closeMenu()"><img src="img/homepage/ico_close.png" alt=""></a>
 			</section>
 			<section class="header_bottom">
-				<nav class="header_menu">
+				<nav class="header_menu" id="header_menu">
 					<div class="header_ul_wrap">
 					<ul>
-						<li class="women"><a href="#">Women</a></li>
-						<li class="men"><a href="#">Men</a></li>
-						<li class="handbags"><a href="#">Handbags</a></li>
-						<li class="accessories"><a href="#">Accessories</a></li>
-						<li class="sale"><a href="#">Sale</a></li>
-						<li class="new_arrivals"><a href="#">New Arrivals</a></li>
-						<li class="clearance"><a href="#">Clearance</a></li>
-						<li class="store_locator"><a href="#">Store Locator</a></li>
+						<li class="women"><a href="catalog.html">Women</a></li>
+						<li class="men"><a href="catalog.html">Men</a></li>
+						<li class="handbags"><a href="catalog.html">Handbags</a></li>
+						<li class="accessories"><a href="catalog.html">Accessories</a></li>
+						<li class="sale"><a href="catalog.html">Sale</a></li>
+						<li class="new_arrivals"><a href="catalog.html">New Arrivals</a></li>
+						<li class="clearance"><a href="catalog.html">Clearance</a></li>
+						<li class="store_locator"><a href="catalog.html">Store Locator</a></li>
 					</ul>
 					</div>
 					<form action="#" class="search">
@@ -52,7 +56,7 @@
 					</a>
 				</div>
 				<div class="slide">
-					<a href="">
+					<a href="catalog.html">
 						<img class="desctop" src="img/homepage/carousel/2.jpg" alt="">
 						<img class="tablet" src="img/homepage/carousel/2t.jpg" alt="">
 						<img class="mobile" src="img/homepage/carousel/2m.jpg" alt="">
@@ -101,7 +105,7 @@
 			</section>
 		</div>
 		<main class="arrivals content_wrap">
-			<h2><a href="#">New arrivals</a></h2>
+			<h2><a href="catalog.html">New arrivals</a></h2>
 			<div class="arrivals_wrap">
 				<figure class="item_1">
 					<a href="#"><img src="img/homepage/arrivals_1.jpg" alt="Straight Leg Jeans"></a>
@@ -132,7 +136,7 @@
 					</figcaption>
 				</figure>
 			</div>
-			<a href="#" class="all_arrivals">All arrivals</a>
+			<a href="catalog.html" class="all_arrivals">All arrivals</a>
 		</main>
 		<footer>
 			<div class="footer_top">

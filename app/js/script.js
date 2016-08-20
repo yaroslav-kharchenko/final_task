@@ -2,28 +2,59 @@ console.log('My script');
 
 function dropMenu(){
 	$('header nav').addClass('drop_menu');
-	// $('.header_top .drop_menu_button').css("display","none");
-	// $('.header_top .close_menu_button').css("display","block");
 	document.getElementsByClassName('drop_menu_button')[0].style.display = "none";
 	document.getElementsByClassName('close_menu_button')[0].style.display = "block";
-	$('.drop_menu').fadeTo('slow', 1);
-	// document.getElementsByClassName('drop_menu').style.opacity = "1";
-	// $('.drop_menu').css({
-	// 	opacity: '1',
-	// });
+	$('.drop_menu').fadeTo(500, 1);
 }
 
 function closeMenu(){
-	// $('.drop_menu').fadeTo('slow', 0);
-	$('.drop_menu').removeClass('drop_menu');
-	document.getElementsByClassName('header_menu').style = "";
-	// $('.header_top .close_menu_button').css("display","none");
-	// $('.header_top .drop_menu_button').css("display","block");
-	document.getElementsByClassName('close_menu_button')[0].style = "";
-	document.getElementsByClassName('drop_menu_button')[0].style = "";
+	$('.drop_menu').fadeTo(500, 0);
+	setTimeout(function(){
+			$('.drop_menu').removeClass('drop_menu');
+			$('#header_menu').removeAttr("style");
+			document.getElementsByClassName('close_menu_button')[0].style = "";
+			document.getElementsByClassName('drop_menu_button')[0].style = "";
+		},600);
+}
+
+function calculateBag(){
+	var totalPrice = 0;
+	var totalQuantity = 0;
+	var priceStr = '';
+	var headStr;
+	var tailStr;
+	var storage = $.parseJSON(localStorage.getItem('bagStorage'));
+	if (storage == null || storage.items.length == 0) {
+		$('.bag_price').html('');
+		$('.bag_count').html('');
+		$('.total_cost').html('£0.00');
+	} else{
+		for (var i = 0; i < storage.items.length; i++) {
+			totalPrice += storage.items[i].price * storage.items[i].quantity;
+			totalQuantity += storage.items[i].quantity;
+		}
+		totalPrice = totalPrice.toFixed(2);
+		if (totalPrice >= 1000) {
+			priceStr += totalPrice;
+			headStr = priceStr.substr(0, priceStr.length - 6);
+			tailStr = priceStr.substr(-6);
+			totalPrice = headStr + " " + tailStr;
+			$('.bag_price').html('£'+totalPrice);
+			if ($('.total_cost')) {
+				$('.total_cost').html('£'+totalPrice);
+			}
+		} else{
+			$('.bag_price').html('£'+totalPrice);
+			if ($('.total_cost')) {
+				$('.total_cost').html('£'+totalPrice);
+			}
+		}
+		$('.bag_count').html('('+totalQuantity+')');
+	}
 }
 
 $(document).ready(function(){
+	calculateBag();
 
 	var slidesBox = $('.slider_inner');
 	var slides = slidesBox.children('.slide');
@@ -42,8 +73,6 @@ $(document).ready(function(){
 		if(tempIndex < slidesLength){
 			$('.slider_nav .active').removeClass('active');
 			$('.slider_nav .dot').eq(tempIndex).addClass('active');
-			// sliderOffset = ((sliderIndex * slidesWidth)/slidesWidth)*100;
-			// sliderOffset = window.inner.width();
 			if (windowWidth > 1300) {
 				windowWidth = 1300;
 			}
