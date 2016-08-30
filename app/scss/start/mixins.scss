@@ -8,7 +8,7 @@
 
 @mixin active-btn{
 	transition-property: background, color;
-	transition-duration: .5s;
+	transition-duration: .3s;
 	background: #fff;
 	color: black;
 	&:hover{

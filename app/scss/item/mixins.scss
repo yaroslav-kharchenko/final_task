@@ -5,3 +5,17 @@
     clear: both;
   }
 }
+
+@mixin active-btn{
+	transition-property: background, color;
+	transition-duration: .5s;
+	background: #fff;
+	color: black;
+	&:hover{
+		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+	}
+	&:active{
+		background: #f14a58;
+		color: white;
+	}
+}

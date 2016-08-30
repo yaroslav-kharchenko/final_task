@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/start/style.css">
+	<script src="js/common/libs.min.js"></script>
+	<script src="js/catalog_data.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/start.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+	<!-- HEADER -->
+		<header class="content_wrap">
+			<section class="header_top">
+				<h1><a href="start.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag" title="My Bag"><img src="img/start/bag.svg" alt="">Bag
+					<span class="bag_price"></span>
+					<span class="bag_count"></span>
+				</a>
+				<a href="#" class="sign_up">E-mail sign up</a>
+				<a href="#" class="drop_menu_button" onclick="menu.drop()"><img src="img/start/ico_menu.svg" alt=""></a>
+				<a href="#" class="close_menu_button" onclick="menu.close()"><img src="img/start/ico_close.png" alt=""></a>
+			</section>
+			<section class="header_bottom">
+				<nav class="header_menu" id="header_menu">
+					<div class="header_ul_wrap">
+					<ul>
+						<li class="women"><a href="catalog.html">Women</a></li>
+						<li class="men"><a href="catalog.html">Men</a></li>
+						<li class="handbags"><a href="catalog.html">Handbags</a></li>
+						<li class="accessories"><a href="catalog.html">Accessories</a></li>
+						<li class="sale"><a href="catalog.html">Sale</a></li>
+						<li class="new_arrivals"><a href="catalog.html">New Arrivals</a></li>
+						<li class="clearance"><a href="catalog.html">Clearance</a></li>
+						<li class="store_locator"><a href="catalog.html">Store Locator</a></li>
+					</ul>
+					</div>
+					<form action="#" class="search">
+						<span>
+							<input type="text" class="search-input" placeholder="Style Name">
+							<input type="image" src="img/start/search.svg"></input>
+						</span>
+					</form>
+				</nav>
+			</section>
+		</header>
+
+	<!-- BANNERS -->
+		<div class="baner_slider">
+			<div class="slider_inner">
+				<div class="slide">
+					<a href="">
+						<img class="desctop" src="img/start/carousel/1.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/1t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/1m.jpg" alt="">
+					</a>
+				</div>
+				<div class="slide">
+					<a href="catalog.html">
+						<img class="desctop" src="img/start/carousel/2.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/2t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/2m.jpg" alt="">
+					</a>
+				</div>
+				<div class="slide">
+					<a href="">
+						<img class="desctop" src="img/start/carousel/3.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/3t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/3m.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="slider_nav">
+			</div>
+		</div>
+		<div class="banners">
+			<section class="left_banner">
+				<a href="#">
+					<img src="img/start/nike_red.jpg" alt="Nike Red">
+					<img src="img/start/nike_red_tablet.jpg" alt="Nike Red">
+					<img src="img/start/nike_red_mobile.jpg" alt="Nike Red">
+					<div class="banner_text">
+						<h4>Nike Red</h4>
+						<span>New</span>
+					</div>
+				</a>
+			</section>
+			<section class="right_banner">
+				<a href="#">
+					<img src="img/start/girl_look.jpg" alt="Caps Hats">
+					<div class="banner_text">
+						<h4>Caps & Hats</h4>
+						<span>Sale -50%</span>
+					</div>
+				</a>
+			</section>
+			<section class="right_banner_tablet">
+				<a href="#">
+					<img src="img/start/bags_sale.jpg" alt="Sale -70%">
+					<div class="banner_text">
+						<h4>Sale</h4>
+						<span>-70%</span>
+					</div>
+				</a>
+			</section>
+		</div>
+
+		<!-- MAIN CONTENT -->
+		<main class="arrivals content_wrap">
+			<h2><a href="catalog.html">New arrivals</a></h2>
+			<div class="arrivals_wrap">
+				<figure class="item_1" data-item-id="5">
+					<div class="item_photo">
+						<img src="img/start/arrivals_1.jpg" alt="Straight Leg Jeans">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
+					<figcaption class="item_info">
+						<a href="item.html" class="item_name">Straight Leg Jeans</a><br>
+						<span class="item_price">£55.00</span>
+					</figcaption>
+				</figure>
+				<figure class="item_2" data-item-id="6">
+					<div class="item_photo">
+						<img src="img/start/arrivals_2.jpg" alt="Boyfriend T-Shirt with Bohemian Print">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
+					<figcaption class="item_info">
+						<a href="item.html" class="item_name">Boyfriend T-Shirt with Bohemian Print</a><br>
+						<span class="item_price">£34.25</span>
+					</figcaption>
+				</figure>
+				<figure class="item_3" data-item-id="7">
+					<div class="item_photo">
+						<img src="img/start/arrivals_3.jpg" alt="Only Busted Knee Jean">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
+					<figcaption class="item_info">
+						<a href="item.html" class="item_name">Only Busted Knee Jean</a><br>
+						<span class="item_price">£140.50</span>
+					</figcaption>
+				</figure>
+				<figure class="item_4" data-item-id="8">
+					<div class="item_photo">
+						<img src="img/start/arrivals_4.jpg" alt="Only Skinny Jeans">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
+					<figcaption class="item_info">
+						<a href="item.html" class="item_name">Only Skinny Jeans</a><br>
+						<span class="item_price">£12.75</span>
+					</figcaption>
+				</figure>
+			</div>
+			<a href="catalog.html" class="all_arrivals">All arrivals</a>
+		</main>
+
+		<!-- CATALOG POPUP -->
+		<div class="popup-item" id="popup-item">
+			<figure>
+				<img src="" alt="" class="popup-item-photo">
+				<figcaption class="popup-item-price">
+				</figcaption>
+			</figure>
+			<section class="popup-item-info">
+				<h3 class="popup-item-name"></h3>
+				<section class="item_color">
+					<h6>Color</h6>
+					<ul></ul>
+				</section>
+				<section class="item_size">
+					<h6>Size</h6>
+					<ul></ul>
+				</section>
+				<section class="popup-item-description">
+				</section>
+			</section>
+			<a href="" class="popup-item-add_btn" id="popup-add">Add to bag</a>
+			<a href="#" class="popup-item-close_btn" id="popup-close"><img src="img/catalog/ico_close.png" alt=""></a>
+		</div>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer_top">
+				<section class="section_1">
+					<section class="quick_links">
+						<h5>Quick Links</h5>
+						<ul>
+							<li><a href="#">Store locator</a></li>
+							<li><a href="#">Gift cards</a></li>
+							<li><a href="#">Size guide</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</section>
+					<section class="customer_care">
+						<h5>Customer Care</h5>
+						<ul>
+							<li><a href="#">Customer service</a></li>
+							<li><a href="#">Track my order</a></li>
+							<li><a href="#">Return policy</a></li>
+							<li><a href="#">Shipping & delivery</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</section>
+				</section>
+				<section class="section_2">
+					<section class="section_2_1">
+						<section class="questions">
+							<h5>Questions</h5>
+							<a href="#"><img src="img/start/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
+						</section>
+						<section class="phone">
+							<h5>Order by phone</h5>
+							<p>8-800-409-47-12</p>
+						</section>
+					</section>
+					<section class="section_2_2 delivery">
+						<p>
+							We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+						</p>
+					</section>
+					<section class="section_2_3 socials">
+						<a href="#"><img src="img/start/fb.svg" alt="facebook"></a>
+						<a href="#"><img src="img/start/twitter_blue.svg" alt="twitter"></a>
+					</section>
+				</section>
+			</div>
+			<div class="footer_bottom">
+				<section class="section_3">
+					<ul>
+						<li><a href="#">Legal notice</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+				</section>
+				<section class="section_4 copyright">
+					&copy; 2010–2015, The Template Group inc.
+				</section>
+				<section class="section_5 share">
+					<span>Share</span>
+					<i></i>
+					<a href="#">1 437</a>
+				</section>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

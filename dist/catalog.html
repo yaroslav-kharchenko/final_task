@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/catalog/style.css">
+	<script src="js/common/libs.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	<script src="js/common/jq.ui.tp.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/catalog_data.js"></script>
+	<script src="js/catalog.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- HEADER -->
+		<header class="content_wrap">
+			<section class="header_top">
+				<h1><a href="start.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag"><img src="img/start/bag.svg" alt="">Bag
+					<span class="bag_price"></span>
+					<span class="bag_count"></span>
+				</a>
+				<a href="#" class="sign_up">E-mail sign up</a>
+				<a href="#" class="drop_menu_button" onclick="menu.drop()"><img src="img/start/ico_menu.svg" alt=""></a>
+				<a href="#" class="close_menu_button" onclick="menu.close()"><img src="img/start/ico_close.png" alt=""></a>
+			</section>
+			<section class="header_bottom">
+				<nav class="header_menu">
+					<div class="header_ul_wrap">
+					<ul>
+						<li class="women"><a href="catalog.html">Women</a></li>
+						<li class="men"><a href="catalog.html">Men</a></li>
+						<li class="handbags"><a href="catalog.html">Handbags</a></li>
+						<li class="accessories"><a href="catalog.html">Accessories</a></li>
+						<li class="sale"><a href="catalog.html">Sale</a></li>
+						<li class="new_arrivals"><a href="catalog.html">New Arrivals</a></li>
+						<li class="clearance"><a href="catalog.html">Clearance</a></li>
+						<li class="store_locator"><a href="catalog.html">Store Locator</a></li>
+					</ul>
+					</div>
+					<form action="#" class="search">
+						<span>
+							<input type="text" class="search-input" placeholder="Style Name">
+							<input type="image" src="img/start/search.svg"></input>
+						</span>
+					</form>
+				</nav>
+			</section>
+		</header>
+
+		<!-- FILTERS -->
+		<section class="filters_popup">
+			<div class="filters_toolbar">
+				<ul class="filters_toolbar_list">
+					<li class="filter_value">Fashion</li>
+					<li class="filter_value">Product type</li>
+					<li class="filter_value">Color</li>
+					<li class="filter_value">Brand</li>
+					<li class="filter_value">Size</li>
+					<li class="filter_value">Price range</li>
+				</ul>
+			</div>
+			<a href="#" class="close_filters">
+				<img src="img/start/ico_close.png" alt="">
+			</a>
+			<div class="popup_wrap">
+				<i>Drag and Select</i>
+			</div>
+		</section>
+		<div class="filters_wrap">
+			<ul class="filters_list">
+				<li class="filter">
+					<h5 class="filter_name">Fashion</h5>
+					<h6 class="filter_value">Casual style</h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">Casual style</a></li>
+						<li class="filter_option" data-id="1"><a href="">New Look</a></li>
+						<li class="filter_option" data-id="2"><a href="">Sport</a></li>
+						<li class="filter_option" data-id="3"><a href="">Vintage</a></li>
+						<li class="filter_option" data-id="4"><a href="">Сlassical</a></li>
+						<li class="filter_option" data-id="5"><a href="">Nail the 90s</a></li>
+					</ul>
+				</li>
+				<li class="filter">
+					<h5 class="filter_name">Product type</h5>
+					<h6 class="filter_value"></h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">Coats & Jackets</a></li>
+						<li class="filter_option" data-id="1"><a href="">Dresses</a></li>
+						<li class="filter_option" data-id="2"><a href="">Jersey Tops</a></li>
+						<li class="filter_option" data-id="3"><a href="">Petite</a></li>
+					</ul>
+				</li>
+				<li class="filter">
+					<h5 class="filter_name">Color</h5>
+					<h6 class="filter_value"></h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">Black</a></li>
+						<li class="filter_option" data-id="1"><a href="">Blue</a></li>
+						<li class="filter_option" data-id="2"><a href="">Red</a></li>
+						<li class="filter_option" data-id="3"><a href="">Green</a></li>
+						<li class="filter_option" data-id="4"><a href="">Golden</a></li>
+						<li class="filter_option" data-id="5"><a href="">Yellow</a></li>
+					</ul>
+				</li>
+				<li class="filter">
+					<h5 class="filter_name">Brand</h5>
+					<h6 class="filter_value">Antipodium</h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">Adidas</a></li>
+						<li class="filter_option" data-id="1"><a href="">Antipodium</a></li>
+						<li class="filter_option" data-id="2"><a href="">New Balance</a></li>
+						<li class="filter_option" data-id="3"><a href="">River Island</a></li>
+						<li class="filter_option" data-id="4"><a href="">Chi Chi London</a></li>
+					</ul>
+				</li>
+				<li class="filter">
+					<h5 class="filter_name">Size</h5>
+					<h6 class="filter_value">UK 18</h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">UK 18</a></li>
+						<li class="filter_option" data-id="1"><a href="">UK 18L</a></li>
+						<li class="filter_option" data-id="2"><a href="">UK 20S</a></li>
+						<li class="filter_option" data-id="3"><a href="">UK 20</a></li>
+						<li class="filter_option" data-id="4"><a href="">UK 20L</a></li>
+						<li class="filter_option" data-id="5"><a href="">UK 22</a></li>
+						<li class="filter_option" data-id="6"><a href="">UK 22S</a></li>
+					</ul>
+				</li>
+				<li class="filter">
+					<h5 class="filter_name">Price range</h5>
+					<h6 class="filter_value"></h6>
+					<ul class="options_list">
+						<li class="filter_option" data-id="0"><a href="">To £99</a></li>
+						<li class="filter_option" data-id="1"><a href="">£100-£299</a></li>
+						<li class="filter_option" data-id="2"><a href="">From £300</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- CATALOG -->
+		<main class="catalog content_wrap">
+			<figure class="item_1" data-item-id="1">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_1.jpg" alt="Only Skinny Jeans">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="item.html" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="item.html" class="item_name">Only Skinny Jeans</a><br>
+					<span class="item_price">£65.50</span>
+				</figcaption>
+			</figure>
+			<figure class="item_2" data-item-id="2">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_2.jpg" alt="Neck Knitted Jumper">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="item.html" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="item.html" class="item_name">Neck Knitted Jumper</a><br>
+					<span class="item_price">£76.25</span>
+				</figcaption>
+			</figure>
+			<figure class="item_3" data-item-id="3">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_3.jpg" alt="Turtle Neck Jumper in Rib">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="item.html" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="item.html" class="item_name">Turtle Neck Jumper in Rib</a><br>
+					<span class="item_price">£130.25&nbsp</span>
+					<i>New</i>
+				</figcaption>
+			</figure>
+			<figure class="item_4" data-item-id="4">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_4.jpg" alt="With Patchwork Crochet">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="item.html" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="item.html" class="item_name">With Patchwork Crochet</a><br>
+					<span class="item_price">£80.60</span>
+				</figcaption>
+			</figure>
+
+			<div class="catalog_banner">
+				<h3>Last weekend <span>extra 50%</span> off on all reduced boots and shoulder bags</h3><br>
+				<i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GTM on March 1st 2015</i>
+			</div>
+
+			<figure class="item_5">
+				<a href="#">
+					<img src="img/catalog/catalog_item_5.jpg" alt="Levi’s Jeans for women"></a>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Levi’s Jeans for women</a><br>
+					<i>More colours</i>
+				</figcaption>
+			</figure>
+			<figure class="item_6">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_6.jpg" alt="Boyfriend T-Shirt with Bohemian Print">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Boyfriend T-Shirt with Bohemian Print</a><br>
+					<span class="item_price">
+						<span>£120.00 
+							<i>-25%</i>
+						</span>
+						&nbsp £90.00
+					</span>
+				</figcaption>
+			</figure>
+			<figure class="item_7">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_7.jpg" alt="Colour Block">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Colour Block</a><br>
+					<span class="item_price">£550.50</span>
+				</figcaption>
+			</figure>
+			<figure class="item_8">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_8.jpg" alt="Monki Festval Knitted">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Monki Festval Knitted</a><br>
+					<span class="item_price">£24.75</span>
+				</figcaption>
+			</figure>
+			<figure class="item_9">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_9.jpg" alt="Oversized Cardigan">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Oversized Cardigan</a><br>
+					<span class="item_price">£90.00</span>
+				</figcaption>
+			</figure>
+			<figure class="item_10">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_10.jpg" alt="Paul & Joe Sister Jumper  with Neon Trims">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Paul & Joe Sister Jumper  with Neon Trims</a><br>
+					<span class="item_price">£19.75</span>
+					<i>New</i>
+				</figcaption>
+			</figure>
+			<figure class="item_11">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_11.jpg" alt="Only Busted Knee Jean">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Only Busted Knee Jean</a><br>
+					<span class="item_price">£140.50</span>
+				</figcaption>
+			</figure>
+			<figure class="item_12">
+				<div class="item_photo">
+					<img src="img/catalog/catalog_item_12.jpg" alt="Boyfriend T-Shirt with Bohemian Print">
+					<div class="quick_wrap">
+						<div class="quick_links">
+							<a href="#" class="quick_view">Quick view</a><br>
+							<a href="#" class="more_photos">More photos</a>
+						</div>
+					</div>
+				</div>
+				<figcaption class="item_info">
+					<a href="" class="item_name">Boyfriend T-Shirt with Bohemian Print</a><br>
+					<span class="item_price">£85.75</span>
+				</figcaption>
+			</figure>
+			<div class="show_more"><a href="">Show more</a></div>
+		</main>
+
+		<!-- CATALOG POPUP -->
+
+		<div class="popup-item" id="popup-item">
+			<figure>
+				<img src="" alt="" class="popup-item-photo">
+				<figcaption class="popup-item-price">
+				</figcaption>
+			</figure>
+			<section class="popup-item-info">
+				<h3 class="popup-item-name"></h3>
+				<section class="item_color">
+					<h6>Color</h6>
+					<ul></ul>
+				</section>
+				<section class="item_size">
+					<h6>Size</h6>
+					<ul></ul>
+				</section>
+				<section class="popup-item-description">
+				</section>
+			</section>
+			<a href="" class="popup-item-add_btn" id="popup-add">Add to bag</a>
+			<a href="" class="popup-item-close_btn" id="popup-close"><img src="img/catalog/ico_close.png" alt=""></a>
+		</div>
+
+		<!-- BANNERS -->
+
+		<div class="banners">
+			<section class="left_banner">
+				<a href="">
+					<img src="img/catalog/adidas_blue.jpg" alt="Adidas Blue">
+					<img src="img/catalog/adidas_blue_tablet.jpg" alt="Adidas Blue">
+					<img src="img/catalog/adidas_blue_mobile.jpg" alt="Adidas Blue">
+					<div class="banner_text">
+						<h4>Adidas Blue</h4>
+						<span>For men</span>
+					</div>
+				</a>
+			</section>
+			<section class="right_banner_1">
+				<a href="">
+					<img src="img/catalog/repair_patches.jpg" alt="Repair Patches">
+					<img src="img/catalog/repair_patches_tablet.jpg" alt="Repair Patches">
+					<div class="banner_text">
+						<h4>Repair Patches</h4>
+						<span>£ 150.50</span>
+					</div>
+				</a>
+			</section>
+			<section class="right_banner_2">
+				<a href="">
+					<img src="img/catalog/sale.jpg" alt="Sale">
+					<div class="banner_text">
+						<h4>Sale</h4>
+						<span>-70%</span>
+					</div>
+				</a>
+			</section>
+		</div>
+		
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer_top">
+				<section class="section_1">
+					<section class="quick_links">
+						<h5>Quick Links</h5>
+						<ul>
+							<li><a href="#">Store locator</a></li>
+							<li><a href="#">Gift cards</a></li>
+							<li><a href="#">Size guide</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</section>
+					<section class="customer_care">
+						<h5>Customer Care</h5>
+						<ul>
+							<li><a href="#">Customer service</a></li>
+							<li><a href="#">Track my order</a></li>
+							<li><a href="#">Return policy</a></li>
+							<li><a href="#">Shipping & delivery</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</section>
+				</section>
+				<section class="section_2">
+					<section class="section_2_1">
+						<section class="questions">
+							<h5>Questions</h5>
+							<a href="#"><img src="img/start/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
+						</section>
+						<section class="phone">
+							<h5>Order by phone</h5>
+							<p>8-800-409-47-12</p>
+						</section>
+					</section>
+					<section class="section_2_2 delivery">
+						<p>
+							We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+						</p>
+					</section>
+					<section class="section_2_3 socials">
+						<a href="#"><img src="img/start/fb.svg" alt="facebook"></a>
+						<a href="#"><img src="img/start/twitter_blue.svg" alt="twitter"></a>
+					</section>
+				</section>
+			</div>
+			<div class="footer_bottom">
+				<section class="section_3">
+					<ul>
+						<li><a href="#">Legal notice</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+				</section>
+				<section class="section_4 copyright">
+					&copy; 2010–2015, The Template Group inc.
+				</section>
+				<section class="section_5 share">
+					<span>Share</span>
+					<i></i>
+					<a href="#">1 437</a>
+				</section>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +10,23 @@
 	<script src="js/common/libs.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<script src="js/common/jq.ui.tp.js"></script>
+	<script src="js/script.js"></script>
 	<script src="js/catalog_data.js"></script>
 	<script src="js/catalog.js"></script>
 </head>
 <body>
 	<div class="wrapper">
-		<!-- header -->
+		<!-- HEADER -->
 		<header class="content_wrap">
 			<section class="header_top">
-				<h1><a href="homepage.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
-				<a href="shopping_bag.html" class="bag"><img src="img/homepage/bag.svg" alt="">Bag
+				<h1><a href="start.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag"><img src="img/start/bag.svg" alt="">Bag
 					<span class="bag_price"></span>
 					<span class="bag_count"></span>
 				</a>
 				<a href="#" class="sign_up">E-mail sign up</a>
-				<a href="#" class="drop_menu_button" onclick="dropMenu()"><img src="img/homepage/ico_menu.svg" alt=""></a>
-				<a href="#" class="close_menu_button" onclick="closeMenu()"><img src="img/homepage/ico_close.png" alt=""></a>
+				<a href="#" class="drop_menu_button" onclick="menu.drop()"><img src="img/start/ico_menu.svg" alt=""></a>
+				<a href="#" class="close_menu_button" onclick="menu.close()"><img src="img/start/ico_close.png" alt=""></a>
 			</section>
 			<section class="header_bottom">
 				<nav class="header_menu">
@@ -43,13 +45,12 @@
 					<form action="#" class="search">
 						<span>
 							<input type="text" class="search-input" placeholder="Style Name">
-							<input type="image" src="img/homepage/search.svg"></input>
+							<input type="image" src="img/start/search.svg"></input>
 						</span>
 					</form>
 				</nav>
 			</section>
 		</header>
-		<!-- header -->
 
 		<!-- FILTERS -->
 		<section class="filters_popup">
@@ -64,7 +65,7 @@
 				</ul>
 			</div>
 			<a href="#" class="close_filters">
-				<img src="img/homepage/ico_close.png" alt="">
+				<img src="img/start/ico_close.png" alt="">
 			</a>
 			<div class="popup_wrap">
 				<i>Drag and Select</i>
@@ -141,7 +142,6 @@
 				</li>
 			</ul>
 		</div>
-		<!-- FILTERS -->
 		
 		<!-- CATALOG -->
 		<main class="catalog content_wrap">
@@ -156,7 +156,7 @@
 					</div>
 				</div>
 				<figcaption class="item_info">
-					<a href="" class="item_name">Only Skinny Jeans</a><br>
+					<a href="item.html" class="item_name">Only Skinny Jeans</a><br>
 					<span class="item_price">£65.50</span>
 				</figcaption>
 			</figure>
@@ -171,7 +171,7 @@
 					</div>
 				</div>
 				<figcaption class="item_info">
-					<a href="" class="item_name">Neck Knitted Jumper</a><br>
+					<a href="item.html" class="item_name">Neck Knitted Jumper</a><br>
 					<span class="item_price">£76.25</span>
 				</figcaption>
 			</figure>
@@ -186,7 +186,7 @@
 					</div>
 				</div>
 				<figcaption class="item_info">
-					<a href="" class="item_name">Turtle Neck Jumper in Rib</a><br>
+					<a href="item.html" class="item_name">Turtle Neck Jumper in Rib</a><br>
 					<span class="item_price">£130.25&nbsp</span>
 					<i>New</i>
 				</figcaption>
@@ -202,7 +202,7 @@
 					</div>
 				</div>
 				<figcaption class="item_info">
-					<a href="" class="item_name">With Patchwork Crochet</a>
+					<a href="item.html" class="item_name">With Patchwork Crochet</a><br>
 					<span class="item_price">£80.60</span>
 				</figcaption>
 			</figure>
@@ -356,12 +356,8 @@
 				</section>
 			</section>
 			<a href="" class="popup-item-add_btn" id="popup-add">Add to bag</a>
-			<a href="#" class="popup-item-close_btn" id="popup-close"><img src="img/catalog/ico_close.png" alt=""></a>
+			<a href="" class="popup-item-close_btn" id="popup-close"><img src="img/catalog/ico_close.png" alt=""></a>
 		</div>
-		
-		<!-- CATALOG POPUP -->
-
-		<!-- CATALOG -->
 
 		<!-- BANNERS -->
 
@@ -397,10 +393,8 @@
 				</a>
 			</section>
 		</div>
-
-		<!-- BANNERS -->
 		
-		<!-- footer -->
+		<!-- FOOTER -->
 		<footer>
 			<div class="footer_top">
 				<section class="section_1">
@@ -430,7 +424,7 @@
 					<section class="section_2_1">
 						<section class="questions">
 							<h5>Questions</h5>
-							<a href="#"><img src="img/homepage/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
+							<a href="#"><img src="img/start/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
 						</section>
 						<section class="phone">
 							<h5>Order by phone</h5>
@@ -443,8 +437,8 @@
 						</p>
 					</section>
 					<section class="section_2_3 socials">
-						<a href="#"><img src="img/homepage/fb.svg" alt="facebook"></a>
-						<a href="#"><img src="img/homepage/twitter_blue.svg" alt="twitter"></a>
+						<a href="#"><img src="img/start/fb.svg" alt="facebook"></a>
+						<a href="#"><img src="img/start/twitter_blue.svg" alt="twitter"></a>
 					</section>
 				</section>
 			</div>
@@ -466,7 +460,6 @@
 				</section>
 			</div>
 		</footer>
-		<!-- footer -->
 	</div>
 </body>
 </html>

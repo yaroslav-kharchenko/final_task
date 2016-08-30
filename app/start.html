@@ -5,22 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Template</title>
 	<link rel="stylesheet" href="css/normalize.min.css">
-	<link rel="stylesheet" href="css/homepage/style.css">
+	<link rel="stylesheet" href="css/start/style.css">
 	<script src="js/common/libs.min.js"></script>
+	<script src="js/catalog_data.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/start.js"></script>
 </head>
 <body>
 	<div class="wrapper">
+	<!-- HEADER -->
 		<header class="content_wrap">
 			<section class="header_top">
-				<h1><a href="homepage.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
-				<a href="shopping_bag.html" class="bag"><img src="img/homepage/bag.svg" alt="">Bag
+				<h1><a href="start.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag" title="My Bag"><img src="img/start/bag.svg" alt="">Bag
 					<span class="bag_price"></span>
 					<span class="bag_count"></span>
 				</a>
 				<a href="#" class="sign_up">E-mail sign up</a>
-				<a href="#" class="drop_menu_button" onclick="dropMenu()"><img src="img/homepage/ico_menu.svg" alt=""></a>
-				<a href="#" class="close_menu_button" onclick="closeMenu()"><img src="img/homepage/ico_close.png" alt=""></a>
+				<a href="#" class="drop_menu_button" onclick="menu.drop()"><img src="img/start/ico_menu.svg" alt=""></a>
+				<a href="#" class="close_menu_button" onclick="menu.close()"><img src="img/start/ico_close.png" alt=""></a>
 			</section>
 			<section class="header_bottom">
 				<nav class="header_menu" id="header_menu">
@@ -39,34 +42,35 @@
 					<form action="#" class="search">
 						<span>
 							<input type="text" class="search-input" placeholder="Style Name">
-							<input type="image" src="img/homepage/search.svg"></input>
+							<input type="image" src="img/start/search.svg"></input>
 						</span>
 					</form>
 				</nav>
 			</section>
 		</header>
 
+	<!-- BANNERS -->
 		<div class="baner_slider">
 			<div class="slider_inner">
 				<div class="slide">
 					<a href="">
-						<img class="desctop" src="img/homepage/carousel/1.jpg" alt="">
-						<img class="tablet" src="img/homepage/carousel/1t.jpg" alt="">
-						<img class="mobile" src="img/homepage/carousel/1m.jpg" alt="">
+						<img class="desctop" src="img/start/carousel/1.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/1t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/1m.jpg" alt="">
 					</a>
 				</div>
 				<div class="slide">
 					<a href="catalog.html">
-						<img class="desctop" src="img/homepage/carousel/2.jpg" alt="">
-						<img class="tablet" src="img/homepage/carousel/2t.jpg" alt="">
-						<img class="mobile" src="img/homepage/carousel/2m.jpg" alt="">
+						<img class="desctop" src="img/start/carousel/2.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/2t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/2m.jpg" alt="">
 					</a>
 				</div>
 				<div class="slide">
 					<a href="">
-						<img class="desctop" src="img/homepage/carousel/3.jpg" alt="">
-						<img class="tablet" src="img/homepage/carousel/3t.jpg" alt="">
-						<img class="mobile" src="img/homepage/carousel/3m.jpg" alt="">
+						<img class="desctop" src="img/start/carousel/3.jpg" alt="">
+						<img class="tablet" src="img/start/carousel/3t.jpg" alt="">
+						<img class="mobile" src="img/start/carousel/3m.jpg" alt="">
 					</a>
 				</div>
 			</div>
@@ -76,9 +80,9 @@
 		<div class="banners">
 			<section class="left_banner">
 				<a href="#">
-					<img src="img/homepage/nike_red.jpg" alt="Nike Red">
-					<img src="img/homepage/nike_red_tablet.jpg" alt="Nike Red">
-					<img src="img/homepage/nike_red_mobile.jpg" alt="Nike Red">
+					<img src="img/start/nike_red.jpg" alt="Nike Red">
+					<img src="img/start/nike_red_tablet.jpg" alt="Nike Red">
+					<img src="img/start/nike_red_mobile.jpg" alt="Nike Red">
 					<div class="banner_text">
 						<h4>Nike Red</h4>
 						<span>New</span>
@@ -87,7 +91,7 @@
 			</section>
 			<section class="right_banner">
 				<a href="#">
-					<img src="img/homepage/girl_look.jpg" alt="Caps Hats">
+					<img src="img/start/girl_look.jpg" alt="Caps Hats">
 					<div class="banner_text">
 						<h4>Caps & Hats</h4>
 						<span>Sale -50%</span>
@@ -96,7 +100,7 @@
 			</section>
 			<section class="right_banner_tablet">
 				<a href="#">
-					<img src="img/homepage/bags_sale.jpg" alt="Sale -70%">
+					<img src="img/start/bags_sale.jpg" alt="Sale -70%">
 					<div class="banner_text">
 						<h4>Sale</h4>
 						<span>-70%</span>
@@ -104,40 +108,100 @@
 				</a>
 			</section>
 		</div>
+
+		<!-- MAIN CONTENT -->
 		<main class="arrivals content_wrap">
 			<h2><a href="catalog.html">New arrivals</a></h2>
 			<div class="arrivals_wrap">
-				<figure class="item_1">
-					<a href="#"><img src="img/homepage/arrivals_1.jpg" alt="Straight Leg Jeans"></a>
+				<figure class="item_1" data-item-id="5">
+					<div class="item_photo">
+						<img src="img/start/arrivals_1.jpg" alt="Straight Leg Jeans">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
 					<figcaption class="item_info">
-						<a href="#" class="item_name">Straight Leg Jeans</a><br>
+						<a href="item.html" class="item_name">Straight Leg Jeans</a><br>
 						<span class="item_price">£55.00</span>
 					</figcaption>
 				</figure>
-				<figure class="item_2">
-					<a href="#"><img src="img/homepage/arrivals_2.jpg" alt="Boyfriend T-Shirt with Bohemian Print"></a>
+				<figure class="item_2" data-item-id="6">
+					<div class="item_photo">
+						<img src="img/start/arrivals_2.jpg" alt="Boyfriend T-Shirt with Bohemian Print">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
 					<figcaption class="item_info">
-						<a href="#" class="item_name">Boyfriend T-Shirt with Bohemian Print</a><br>
+						<a href="item.html" class="item_name">Boyfriend T-Shirt with Bohemian Print</a><br>
 						<span class="item_price">£34.25</span>
 					</figcaption>
 				</figure>
-				<figure class="item_3">
-					<a href="#"><img src="img/homepage/arrivals_3.jpg" alt="Only Busted Knee Jean"></a>
+				<figure class="item_3" data-item-id="7">
+					<div class="item_photo">
+						<img src="img/start/arrivals_3.jpg" alt="Only Busted Knee Jean">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
 					<figcaption class="item_info">
-						<a href="#" class="item_name">Only Busted Knee Jean</a><br>
+						<a href="item.html" class="item_name">Only Busted Knee Jean</a><br>
 						<span class="item_price">£140.50</span>
 					</figcaption>
 				</figure>
-				<figure class="item_4">
-					<a href="#"><img src="img/homepage/arrivals_4.jpg" alt="Only Skinny Jeans"></a>
+				<figure class="item_4" data-item-id="8">
+					<div class="item_photo">
+						<img src="img/start/arrivals_4.jpg" alt="Only Skinny Jeans">
+						<div class="quick_wrap">
+							<div class="quick_links">
+								<a href="#" class="quick_view">Quick view</a><br>
+								<a href="item.html" class="more_photos">More photos</a>
+							</div>
+						</div>
+					</div>
 					<figcaption class="item_info">
-						<a href="#" class="item_name">Only Skinny Jeans</a><br>
+						<a href="item.html" class="item_name">Only Skinny Jeans</a><br>
 						<span class="item_price">£12.75</span>
 					</figcaption>
 				</figure>
 			</div>
 			<a href="catalog.html" class="all_arrivals">All arrivals</a>
 		</main>
+
+		<!-- CATALOG POPUP -->
+		<div class="popup-item" id="popup-item">
+			<figure>
+				<img src="" alt="" class="popup-item-photo">
+				<figcaption class="popup-item-price">
+				</figcaption>
+			</figure>
+			<section class="popup-item-info">
+				<h3 class="popup-item-name"></h3>
+				<section class="item_color">
+					<h6>Color</h6>
+					<ul></ul>
+				</section>
+				<section class="item_size">
+					<h6>Size</h6>
+					<ul></ul>
+				</section>
+				<section class="popup-item-description">
+				</section>
+			</section>
+			<a href="" class="popup-item-add_btn" id="popup-add">Add to bag</a>
+			<a href="#" class="popup-item-close_btn" id="popup-close"><img src="img/catalog/ico_close.png" alt=""></a>
+		</div>
+
+		<!-- FOOTER -->
 		<footer>
 			<div class="footer_top">
 				<section class="section_1">
@@ -167,7 +231,7 @@
 					<section class="section_2_1">
 						<section class="questions">
 							<h5>Questions</h5>
-							<a href="#"><img src="img/homepage/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
+							<a href="#"><img src="img/start/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
 						</section>
 						<section class="phone">
 							<h5>Order by phone</h5>
@@ -180,8 +244,8 @@
 						</p>
 					</section>
 					<section class="section_2_3 socials">
-						<a href="#"><img src="img/homepage/fb.svg" alt="facebook"></a>
-						<a href="#"><img src="img/homepage/twitter_blue.svg" alt="twitter"></a>
+						<a href="#"><img src="img/start/fb.svg" alt="facebook"></a>
+						<a href="#"><img src="img/start/twitter_blue.svg" alt="twitter"></a>
 					</section>
 				</section>
 			</div>

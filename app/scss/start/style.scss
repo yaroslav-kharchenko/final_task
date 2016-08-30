@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 @font-face {
   font-family: 'Futura-Heavy';
@@ -98,10 +99,10 @@ a{
 		font-family: 'HelveticaNeue';
 		font-size: 12px;
 		line-height: 65px;
+		letter-spacing: 0.02em;
 	}
 	.sign_up{
 		margin-right: 54px;
-		letter-spacing: 0.02em;
 	}
 	.bag{
 		img{
@@ -217,6 +218,11 @@ header{
 			cursor: pointer;
 			border-radius: 16px;
 			margin: 0 11px 2px;
+			&:last-child{
+				&.active{
+					background: #50c1e9;
+				}
+			}
 		}
 		.active{
 			background: #f14a58;
@@ -302,7 +308,7 @@ header{
 
 .arrivals{
 	padding-top: 75px;
-	padding-bottom: 78px;
+	padding-bottom: 79px;
 	h2{
 		font-size: 60px;
 		text-align: center;
@@ -326,7 +332,7 @@ header{
 			}
 		}
 		.item_info{
-			padding-top: 39px;
+			padding-top: 42px;
 			text-align: center;
 			width: 220px/240px*100%;
 			display: block;
@@ -356,11 +362,158 @@ header{
 		font-size: 26px;
 		font-family: 'FuturaPTDemi';
 		letter-spacing: 0.03em;
+		@include active-btn;
+	}
+	.item_photo{
+		position: relative;
+		font-size: 0;
+	}
+	.quick_wrap{
+		display: none;
+	}
+	figure .item_photo:hover .quick_wrap{
+		position: absolute;
+		display: flex;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.2);
+		width: 100%;
+		height: 100%;
+		font-family: 'FuturaPTDemi';
+		font-size: 22px;
+		line-height: 50px;
+		letter-spacing: 0.03em;
+		text-align: center;
+		.quick_links{
+			margin: auto;
+			height: 100px;
+		}
+		a{
+			color: white;
+			&:hover{
+				color: #f14a58;
+			}
+		}
+	}
+}
+
+// CATALOG POPUP
+.popup-item{
+	position: absolute;
+	background: #fff;
+	z-index: 400;
+	max-width: 650px;
+	width: 70%;
+	max-height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	display: none;
+}
+.popup-item-close_btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	padding: 20px;
+}
+.overlay{
+	overflow-y: hidden;
+		&:after{
+		position: fixed;
+		display: block;
+		content: '';
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.3);
+	}
+}
+
+//--opened
+.popup-item{
+	padding: 30px;
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.6);
+	font-family: 'Roboto';
+	figure{
+		flex: 1 40%;
+		max-width: 40%;
+		padding: 0;
+		margin: 0;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		text-align: center;
+		figcaption{
+			margin-top: 10px;
+		}
+	}
+	.popup-item-info{
+		padding-left: 30px;
+		box-sizing: border-box;
+		flex: 1 60%;
+		max-width: 60%;
+	}
+	h3{
+		font-size: 24px;
+		margin: 0;
+		line-height: 48px;
+	}
+	h6{
+		font-size: 20px;
+		margin: 0;
+		line-height: 40px;
+	}
+	ul{
+		padding: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 100%;
+		li{
+			list-style: none;
+			width: 30%;
+			text-align: center;
+			border: 1px solid #e5e5e5;
+			a{
+				display: inline-block;
+				width: 100%;
+				line-height: 32px;
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: 0.055em;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+			&.checked{
+				background: #707070;
+			}
+		}
+	}
+	.popup-item-description{
+		margin-top: 20px;
+	}
+	#popup-add{
+		display: inline-block;
+		margin: 0 auto;
+		margin-top: 30px;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 60px;
+		width: 35%;
+		@include active-btn;
 	}
 }
 
 //FOOTER
-
 footer{
 	border-top: 1px solid #e5e5e5;
 	section{
@@ -380,6 +533,11 @@ footer{
 			font-size: 14px;
 			font-family: 'HelveticaNeue';
 			line-height: 40px;
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -591,7 +749,7 @@ footer{
 		padding: 0 39px;
 	}
 
-	//header
+	//HEADER
 	header{
 		form{
 			width: 17px;
@@ -625,13 +783,14 @@ footer{
 					top: 0;
 					background: white;
 					line-height: 25px;
+					min-height: 25px; //IE
 					border-bottom: 2px solid #e5e5e5;
 				}
 				border-bottom: 2px solid #e5e5e5;
 			}
 		}
 	}
-	//banner
+	//BANNER
 	.baner_slider{
 		.slider_nav{
 			line-height: 64px;
@@ -709,7 +868,7 @@ footer{
 				}
 			}
 			.item_info{
-				padding-top: 34px;
+				padding-top: 38px;
 				letter-spacing: 0em;
 			}
 		}
@@ -726,6 +885,35 @@ footer{
 			letter-spacing: 0.03em;
 		}
 	}
+
+	// CATALOG POPUP
+	.popup-item{
+		width: 80%;
+		max-height: 800px;
+		padding: 40px;
+		figure{
+			flex: 1 35%;
+			max-width: 35%;
+		}
+		.popup-item-info{
+			flex: 1 65%;
+			max-width: 65%;
+		}
+		h3{
+			font-size: 20px;
+			line-height: 40px;
+		}
+		h6{
+			font-size: 18px;
+			line-height: 36px;
+		}
+		#popup-add{
+			line-height: 54px;
+			font-size: 22px;
+			width: 40%;
+		}
+	}
+
 	//FOOTER
 	.footer_top,.footer_bottom{
 		padding: 0 39px;
@@ -793,6 +981,7 @@ footer{
 	.content_wrap{
 		padding: 0 20px;
 	}
+	//HEADER
 	.header_top{
 		height: 70px;
 		line-height: 65px;
@@ -817,6 +1006,7 @@ footer{
 			top: 0;
 			right: -20px;
 			line-height: 69px;
+			height: 70px;
 			border-left: 1px solid #e5e5e5;
 			img{
 				margin: 0 20px;
@@ -828,8 +1018,6 @@ footer{
 			border-left: none;
 		}
 	}
-
-	//header
 	header{
 		height: 70px;
 		position: relative;
@@ -906,12 +1094,11 @@ footer{
 		}
 	}
 
-	//banner
+	//BANNER
 	.baner_slider{
 		.slider_nav{
 			line-height: 53px;
 		}
-
 	}
 	.desctop,.tablet{
 		display: none;
@@ -950,8 +1137,8 @@ footer{
 			}
 		}
 	}
-	//Arrivals
 
+	//ARRIVALS
 	.arrivals{
 		 h2{
 		 	font-size: 30px;
@@ -962,7 +1149,7 @@ footer{
 		 	figure{
 		 		width: 158px/335px * 100%;
 		 		.item_info{
-		 			padding-top: 24px;
+		 			padding-top: 28px;
 		 			.item_name{
 		 				font-size: 12px;
 		 				line-height: 19px;
@@ -985,7 +1172,54 @@ footer{
 	 	}
 	}
 
-	//footer
+	// CATALOG POPUP
+	.popup-item{
+		width: 100%;
+		height: 70%;
+		max-height: 600px;
+		max-width: 70%;
+		figure{
+			flex: 1 100%;
+			max-width: 100%;
+			img{
+				width: 80%;
+				height: auto;
+			}
+		}
+		.popup-item-info{
+			flex: 1 100%;
+			max-width: 100%;
+			padding: 0 20px;
+		}
+		h3{
+			font-size: 16px;
+			line-height: 32px;
+			text-align: center;
+		}
+		h6{
+			text-align: center;
+			font-size: 14px;
+			line-height: 28px;
+		}
+		ul{
+			li{
+				a{
+					font-size: 14px;
+					line-height: 28px;
+				}
+			}
+		}
+		.popup-item-description{
+			display: none;
+		}
+		#popup-add{
+			line-height: 54px;
+			font-size: 22px;
+			width: 80%;
+		}
+	}
+
+	//FOOTER
 	.footer_top{
 		padding: 0;
 	}

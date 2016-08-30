@@ -100,10 +100,10 @@ a{
 		font-family: 'HelveticaNeue';
 		font-size: 12px;
 		line-height: 65px;
+		letter-spacing: 0.02em;
 	}
 	.sign_up{
 		margin-right: 54px;
-		letter-spacing: 0.02em;
 	}
 	.bag{
 		img{
@@ -117,7 +117,7 @@ a{
 
 header{
 	display: block;
-	height: 120px;
+	height: 119px;
 	position: relative;
 	z-index: 100;
 	background:white;
@@ -196,8 +196,8 @@ header{
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.07em;
-    height: 64px;
-    line-height: 58px;
+    height: 66px;
+    line-height: 60px;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -205,7 +205,7 @@ header{
 .item{
 	.item_gallery{
 		display: block;
-		margin-top: 61px;
+		margin-top: 60px;
 		max-height: 610px;
 		width: 100%;
 		position: relative;
@@ -335,11 +335,12 @@ header{
 		    font-size: 24px;
 		    font-weight: bold;
 		    letter-spacing: 0.07em;
+		    @include active-btn;
 		}
 	}
 }
 
-//Item details
+// --ITEM DETAILS
 
 //BANNERS
 	.banners{
@@ -428,7 +429,8 @@ header{
 			}
 		}
 	}
-//--BANNERS
+
+// ---BANNERS
 
 //FOOTER
 
@@ -451,6 +453,11 @@ footer{
 			font-size: 14px;
 			font-family: 'HelveticaNeue';
 			line-height: 40px;
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -748,7 +755,6 @@ footer{
 				margin-top: -0px;
 			}
 			ul{
-				// justify-content: space-between;
 				li{
 					margin-right: 20px;
 					a{
@@ -767,7 +773,7 @@ footer{
 		}
 	}
 
-	//---ITEM DETAILS
+	// ---ITEM DETAILS
 
 	//BANNERS
 
@@ -803,7 +809,7 @@ footer{
 		}
 	}
 
-	//BANNERS
+	// ---BANNERS
 
 	//FOOTER
 	.footer_top,.footer_bottom{
@@ -897,6 +903,7 @@ footer{
 			top: 0;
 			right: -20px;
 			line-height: 69px;
+			height: 70px;
 			border-left: 1px solid #e5e5e5;
 			img{
 				margin: 0 20px;
@@ -909,7 +916,7 @@ footer{
 		}
 	}
 	header{
-		height: 70px;
+		height: 69px;
 		position: relative;
 		nav{
 			display: none;
@@ -987,9 +994,9 @@ footer{
 
 	//ITEM DETAILS
 	.to_catalog{
-		height: 55px;
+		height: 56px;
 		font-size: 12px;
-		line-height: 48px;
+		line-height: 50px;
 		padding-left: 20px;
 		letter-spacing: 0.05em;
 	}
@@ -1002,7 +1009,7 @@ footer{
 			.main_img{
 				width: 100%;
 				float: none;
-				margin-bottom: 19px;
+				margin-bottom: 16px;
 			}
 			.img_nav{
 				float: none;
@@ -1027,7 +1034,8 @@ footer{
 			.item_name{
 				font-size: 20px;
 				letter-spacing: 0.015em;
-				margin-bottom: 22px;
+				margin-bottom: 21px;
+				line-height: 35px;
 			}
 			.item_price{
 				font-size: 14px;
@@ -1062,7 +1070,7 @@ footer{
 			}
 		}
 	}
-	//ITEM DETAILS
+	// ---ITEM DETAILS
 
 	//BANNERS
 	
@@ -1218,5 +1226,4 @@ footer{
 			}
 		}
 	}
-	// ---FOOTER
 }

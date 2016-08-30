@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shopping Bag</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/shopping_bag/style.css">
+	<script src="js/common/libs.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/shopping_bag.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- HEADER -->
+		<header class="content_wrap">
+			<section class="header_top">
+				<h1><a href="start.html" class="logo">T<span>emp</span>l<span>ate</span></a></h1>
+				<a href="shopping_bag.html" class="bag"><img src="img/start/bag.svg" alt="">Bag 
+					<span class="bag_price"></span>
+					<span class="bag_count"></span>
+				</a>
+				<a href="#" class="sign_up">E-mail sign up</a>
+				<a href="#" class="drop_menu_button" onclick="menu.drop()"><img src="img/start/ico_menu.svg" alt=""></a>
+				<a href="#" class="close_menu_button" onclick="menu.close()"><img src="img/start/ico_close.png" alt=""></a>
+			</section>
+			<section class="header_bottom">
+				<nav class="header_menu">
+					<div class="header_ul_wrap">
+					<ul>
+						<li class="women"><a href="catalog.html">Women</a></li>
+						<li class="men"><a href="catalog.html">Men</a></li>
+						<li class="handbags"><a href="catalog.html">Handbags</a></li>
+						<li class="accessories"><a href="catalog.html">Accessories</a></li>
+						<li class="sale"><a href="catalog.html">Sale</a></li>
+						<li class="new_arrivals"><a href="catalog.html">New Arrivals</a></li>
+						<li class="clearance"><a href="catalog.html">Clearance</a></li>
+						<li class="store_locator"><a href="catalog.html">Store Locator</a></li>
+					</ul>
+					</div>
+					<form action="#" class="search">
+						<span>
+							<input type="text" class="search-input" placeholder="Style Name">
+							<input type="image" src="img/start/search.svg"></input>
+						</span>
+					</form>
+				</nav>
+			</section>
+		</header>
+		
+		<!-- SHOPPING BAG -->
+		<h1 class="bag_title">Shopping bag</h1>
+		<main class="shopping_bag">
+			<section class="bag_items content_wrap">
+				<!-- TEMPLATE -->
+				<!-- <div class="item">
+					<figure>
+						<img src="img/catalog/catalog_item_1.jpg" alt="">
+						<figcaption>£390.25</figcaption>
+					</figure>
+					<div class="side_info">
+						<span class="item_name">Only Skinny Jeans</span>
+						<span class="item_color">Color: Philipa wash</span>
+						<span class="item_size">Size: UK 17</span>
+						<span class="item_quantity">Quantity: 1</span>
+						<a href="#" class="remove_btn">Remove item</a>
+					</div>
+				</div> -->
+			</section>
+			<span class="info_line">
+				You've qualified for Free UK Next Day Delivery on your order. Dont forget to enter the code nexday at checkout
+			</span>
+			<section class="bag_controls controls_wrap">
+				<div class="left_side">
+					<a href="#" class="empty_bag">Empty bag</a>
+				</div>
+				<a href="#" class="buy_btn">Buy now</a>
+				<div class="right_side">
+					<span class="cost_wrap">
+						<span>Total Coast</span><br>
+						<span class="total_cost">£0</span>
+					</span>
+				</div>
+			</section>
+		</main>
+
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer_top">
+				<section class="section_1">
+					<section class="quick_links">
+						<h5>Quick Links</h5>
+						<ul>
+							<li><a href="#">Store locator</a></li>
+							<li><a href="#">Gift cards</a></li>
+							<li><a href="#">Size guide</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</section>
+					<section class="customer_care">
+						<h5>Customer Care</h5>
+						<ul>
+							<li><a href="#">Customer service</a></li>
+							<li><a href="#">Track my order</a></li>
+							<li><a href="#">Return policy</a></li>
+							<li><a href="#">Shipping & delivery</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</section>
+				</section>
+				<section class="section_2">
+					<section class="section_2_1">
+						<section class="questions">
+							<h5>Questions</h5>
+							<a href="#"><img src="img/start/twitter_gray.svg" alt="">Tweet us <span>@template</span></a>
+						</section>
+						<section class="phone">
+							<h5>Order by phone</h5>
+							<p>8-800-409-47-12</p>
+						</section>
+					</section>
+					<section class="section_2_2 delivery">
+						<p>
+							We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+						</p>
+					</section>
+					<section class="section_2_3 socials">
+						<a href="#"><img src="img/start/fb.svg" alt="facebook"></a>
+						<a href="#"><img src="img/start/twitter_blue.svg" alt="twitter"></a>
+					</section>
+				</section>
+			</div>
+			<div class="footer_bottom">
+				<section class="section_3">
+					<ul>
+						<li><a href="#">Legal notice</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+				</section>
+				<section class="section_4 copyright">
+					&copy; 2010–2015, The Template Group inc.
+				</section>
+				<section class="section_5 share">
+					<span>Share</span>
+					<i></i>
+					<a href="#">1 437</a>
+				</section>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

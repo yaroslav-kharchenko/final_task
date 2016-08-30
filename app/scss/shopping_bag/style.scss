@@ -1,5 +1,4 @@
 @import 'mixins';
-// @import 'variables';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
@@ -100,10 +99,10 @@ a{
 		font-family: 'HelveticaNeue';
 		font-size: 12px;
 		line-height: 65px;
+		letter-spacing: 0.02em;
 	}
 	.sign_up{
 		margin-right: 54px;
-		letter-spacing: 0.02em;
 	}
 	.bag{
 		img{
@@ -117,7 +116,7 @@ a{
 
 header{
 	display: block;
-	height: 120px;
+	height: 119px;
 	position: relative;
 	z-index: 100;
 	background:white;
@@ -188,12 +187,12 @@ header{
 //SHOPPING BAG
 .bag_title{
 	margin: 0;
-	line-height: 62px;
-	height: 64px;
+	line-height: 64px;
+	height: 66px;
 	font-size: 24px;
 	padding-left: 90px;
 	box-sizing: border-box;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.07em;
 	width: 100%;
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
@@ -310,10 +309,12 @@ header{
 			font-size: 24px;
 			font-weight: bold;
 			letter-spacing: 0.05em;
+			@include active-btn;
 		}
 		.cost_wrap{
 			text-align: right;
 			padding-top: 19px;
+			display: inline-block;
 			span{
 				font-family: 'HelveticaNeue';
 				font-size: 12px;
@@ -353,6 +354,11 @@ footer{
 			font-size: 14px;
 			font-family: 'HelveticaNeue';
 			line-height: 40px;
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -650,7 +656,7 @@ footer{
 		}
 	}
 
-	//---SHOPPING BAG
+	// ---SHOPPING BAG
 
 	//FOOTER
 	.footer_top,.footer_bottom{
@@ -744,6 +750,7 @@ footer{
 			top: 0;
 			right: -20px;
 			line-height: 69px;
+			height: 70px;
 			border-left: 1px solid #e5e5e5;
 			img{
 				margin: 0 20px;
@@ -756,7 +763,7 @@ footer{
 		}
 	}
 	header{
-		height: 69px;
+		height: 70px;
 		position: relative;
 		nav{
 			display: none;
@@ -913,7 +920,7 @@ footer{
 		}
 	}
 
-	//---SHOPPING BAG
+	// ---SHOPPING BAG
 
 	//FOOTER
 	.footer_top{
@@ -1031,5 +1038,4 @@ footer{
 			}
 		}
 	}
-	// ---FOOTER
 }
